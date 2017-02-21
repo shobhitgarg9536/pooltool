@@ -1,0 +1,78 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/contraintLayoutContacts"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_contrintBottom_toBotttomOf="1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/edittextsearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Contacts"
+        android:textSize="18dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contact_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/edittextsearch" />
+<TextView
+    android:layout_width="216dp"
+    android:layout_height="wrap_content"
+    android:text="None of Your Friend is active"
+    android:textStyle="bold"
+    android:textColor="#00695c"
+    android:visibility="gone"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:id="@+id/textviewinactivefriend"
+    android:fontFamily="sans-serif-smallcaps"
+    tools:layout_constraintRight_creator="1"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/contact_recycler_view"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

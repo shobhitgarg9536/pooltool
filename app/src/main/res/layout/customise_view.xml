@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llcustomiseview"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/tvname"
+android:paddingLeft="15dp"
+        android:layout_margin="5dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etcusmoney"
+android:layout_margin="5dp"
+
+        android:maxLength="12"
+        android:layout_alignTop="@+id/tvname"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="NULL"
+        android:id="@+id/tvshowmoney"
+android:layout_margin="5dp"
+
+        android:padding="5dp"
+        android:layout_alignTop="@+id/tvname"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp" />
+</LinearLayout>

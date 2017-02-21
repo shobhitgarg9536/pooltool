@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbcreateaccount"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbcreateaccount"
+
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.48000002"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:id="@+id/etname"
+            android:layout_weight="80"
+            android:hint="Name"
+            android:maxLines="2"
+            android:maxLength="30" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilmobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/tilname"
+        app:layout_constraintTop_toBottomOf="@+id/tilname"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/tilname"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etmobile"
+            android:layout_weight="80"
+            android:hint="Mobile NO."
+            android:maxLength="15"
+            android:maxLines="2" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/tilmobile"
+        app:layout_constraintTop_toBottomOf="@+id/tilmobile"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/tilmobile"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@."
+            android:id="@+id/etemail"
+            android:layout_weight="80"
+            android:hint="Email Id"
+            android:maxLength="30"
+            android:maxLines="2" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatAutoCompleteTextView
+        android:hint="Country Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoCompleteTextViewcountryname"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tilemail"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/spinnercurrency"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewcountryname"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I accept the terms and conditions"
+        android:id="@+id/cbterms"
+        android:checked="true"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnercurrency"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:background="@drawable/abc_popup_background_mtrl_mult"
+        android:textColor="#000000"
+        android:id="@+id/bcreateaccount"
+        android:gravity="center"
+        android:onClick="CreateUserAccount"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbterms"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBetaVersion"
+        android:text="Beta Version"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/bcreateaccount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+</android.support.constraint.ConstraintLayout>

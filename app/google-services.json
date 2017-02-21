@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "704867750603",
+    "firebase_url": "https://pooltool-86662.firebaseio.com",
+    "project_id": "pooltool-86662",
+    "storage_bucket": "pooltool-86662.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704867750603:android:3d7449e0bf64ad99",
+        "android_client_info": {
+          "package_name": "com.example.shobhit_pc.pooltool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704867750603-3v6nsnnani47utppequnt2frnn0b7grp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHw68wh9131wWnj_WLgwTfD5ClA_PiWew"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704867750603:android:07d5326443a4a299",
+        "android_client_info": {
+          "package_name": "com.shobhit.pooltool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704867750603-3v6nsnnani47utppequnt2frnn0b7grp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHw68wh9131wWnj_WLgwTfD5ClA_PiWew"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tbsettleUp"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                tools:layout_constraintTop_creator="1"
+                tools:layout_constraintRight_creator="1"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/tbsettleUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_contrintBottom_toBotttomOf="1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbsettleUp"
+            tools:layout_contrintBottom_toBotttomOf="1"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/mangegroupContrainstLayout"
+                android:id="@+id/constrainlayout2"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintRight_creator="1"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="1.0">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/moneypaid"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/imageViewpaidby"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Paid BY YOU"
+                    android:fontFamily="serif-monospace"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewpaidby"
+                    android:textColor="#0e0d0d"
+                    tools:layout_conversion_absoluteX="158dp"
+                    tools:layout_conversion_absoluteY="133dp"
+                    tools:layout_conversion_absoluteWidth="93dp"
+                    tools:layout_conversion_absoluteHeight="26dp"
+                    android:id="@+id/textView6"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintLeft_toRightOf="@+id/imageViewpaidby"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_bias="0.42"
+                    android:layout_marginTop="8dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/settle_up_paid_by_you_recycler_view"
+                    android:layout_width="395dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="YOU HAVE TO PAY NO ONE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/textViewSettleUpPaidByText"
+                    app:layout_constraintTop_toBottomOf="@+id/settle_up_paid_by_you_recycler_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/mangegroupContrainstLayout"
+                android:id="@+id/constrainlayout4"
+                tools:layout_constraintRight_creator="1"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrainlayout2">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/moneypay"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/imageViewpay"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Paid To YOU"
+                    android:fontFamily="serif-monospace"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewpay"
+                    android:textColor="#0e0d0d"
+                    tools:layout_conversion_absoluteX="158dp"
+                    tools:layout_conversion_absoluteY="133dp"
+                    tools:layout_conversion_absoluteWidth="93dp"
+                    tools:layout_conversion_absoluteHeight="26dp"
+                    android:id="@+id/textView7"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintLeft_toRightOf="@+id/imageViewpay"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/settle_up_paid_to_you_recycler_view"
+                    android:layout_width="395dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="NO ONE PAY YOU"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/textViewSettleUpPaidToText"
+                    app:layout_constraintTop_toBottomOf="@+id/settle_up_paid_to_you_recycler_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/mangegroupContrainstLayout"
+                android:id="@+id/constrainlayout3"
+                tools:layout_constraintRight_creator="1"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrainlayout4">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/settleup2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/imageViewsettleUpRequest"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Settle Up Request"
+                    android:fontFamily="serif-monospace"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewsettleUpRequest"
+
+                    android:textColor="#0e0d0d"
+                    tools:layout_conversion_absoluteX="158dp"
+                    tools:layout_conversion_absoluteY="133dp"
+                    tools:layout_conversion_absoluteWidth="93dp"
+                    tools:layout_conversion_absoluteHeight="26dp"
+                    android:id="@+id/textView8"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintLeft_toRightOf="@+id/imageViewsettleUpRequest"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/settle_up_request_recycler_view"
+                    android:layout_width="395dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="YOU HAVE TO PAY NO ONE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textIsSelectable="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/textViewSettleUpRequestText"
+                    app:layout_constraintTop_toBottomOf="@+id/settle_up_request_recycler_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
